@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Voices</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    </head>
+    <!-- <body>
+        {% for v in voice %}
+            <div>
+                <h1>{{v.id_no}}</h1>
+            </div>
+        {% endfor %}
+    </body> -->
+    <body>
+        <h1>Voices</h1>
+        <table class="styled-table">
+        <tr><th>ID</th><th>Name</th></tr>
+        {% for v in voice %}
+            <tr>
+                <td>{{v.id_no}}</td>
+                <td>{{v.voice_name}}</td>
+                
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

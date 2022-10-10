@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Language</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+
+    </head>
+
+    <body>
+        <h1>Languages</h1>
+        <table class="styled-table">
+            <tr><th>ID</th><th>Name</th></tr>
+        {% for l in languages %}
+            <tr>
+                <td>{{l.id_no}}</td>
+                <td>{{l.language_name}}</td>
+            </tr>
+        {%endfor%}
+        </table>
+    </body>
+</html>
